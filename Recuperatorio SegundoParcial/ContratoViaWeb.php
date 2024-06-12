@@ -20,8 +20,8 @@ class ContratoViaWeb extends Contrato{
 
         public function calcularImporte(){
             $costo = parent::calcularImporte();
-            $PorcDescuento = $this->getPorcentajeDescuento();
-            $descuento = $costo * ($PorcDescuento / 100);
+            $porcDescuento = $this->getPorcentajeDescuento();
+            $descuento = $costo * ($porcDescuento / 100);
             $costoConDescuento = $costo - $descuento;
             
             return $costoConDescuento;
